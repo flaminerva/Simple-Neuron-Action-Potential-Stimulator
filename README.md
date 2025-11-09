@@ -29,7 +29,7 @@ Here's what I implemented:
 ## Overall Introduction and Current Limitations
 ---
 
-We tried two versions. The first is the simplest version, where most of the parameters are based on experience, which means that we tried several times and found the best parameters based on proportions. Even though it works well for the result data, it still doesn't have physical meaning behind it. Hence we modified it. First, we standardized all the units (it requires some complex unit conversions in the equations). Then we chose to import some HH equation ideas—we used the detailed gate concept (which represents protein subunits on the membrane) and used the conductance equation to calculate the ion current accurately. Then we use the ion current to calculate the change in concentration (this is based on the equation: $Δconcentration = flux / depth$, where $flux = I/(z·F)$).
+We tried two versions. The first is the simplest version, where most of the parameters are based on experience, which means that we tried several times and found the best parameters based on proportions. Even though it works well for the result data, it still doesn't have physical meaning behind it. Hence we modified it. First, we standardized all the units (it requires some complex unit conversions in the equations). Then we chose to import some HH equation ideas—we used the detailed gate concept (which represents protein subunits on the membrane) and used the conductance equation to calculate the ion current accurately. Then we use the ion current to calculate the change in concentration (this is based on the equation: $Δconcentration = flux·Area/Volume$, where $flux = I/(z·F)$).
 
 Also, we used the gate concept to change the permeability of ions (but the discrete changing is not accurate, though I kept it since it's more physical). In addition, we changed the pump mechanism—we use the Michaelis-Menten equation to calculate the pump rate based on the concentration of substrates.
 
@@ -137,7 +137,7 @@ $$I_{pump} = I_{pump,max} \cdot v_{Na} \cdot v_K$$
 
 $$\frac{d[Na^+]_{in}}{dt} = -3 \cdot I_{pump} \cdot fac, \quad \frac{d[K^+]_{in}}{dt} = +2 \cdot I_{pump} \cdot fac$$
 
-**Conversion factor:** $fac = \frac{10^{-3}}{F \cdot V_{cell}}$, where $V_{cell} = \frac{r_{cell}}{3}$
+**Conversion factor:** $fac = \frac{10^{-3}}{F \cdot V_A{cell}}$, where $V_A{cell} = \frac{r_{cell}}{3}$
 
 **Parameters:**
 
