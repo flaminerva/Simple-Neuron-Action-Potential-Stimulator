@@ -71,9 +71,9 @@ Then we met a problem. Since we were using the Goldman equation to calculate the
 ## Output exhibition
 ---
 The current version:
-We use 60mA current to stimulate the neuron.
+We use 60μA/cm² current to stimulate the neuron.
 ![Screenshot 2025-11-08 at 17.32.04](figures/Screenshot%202025-11-08%20at%2017.32.04.png)
-We use 30mA to stimulate the neuron. Note that there is no action potential.
+We use 30μF/cm² to stimulate the neuron. Note that there is no action potential.
 ![Screenshot 2025-11-08 at 17.45.31](figures/Screenshot%202025-11-08%20at%2017.45.31.png)
 ![Screenshot 2025-11-08 at 23.23.28](figures/Screenshot%202025-11-08%20at%2023.23.28.png)
 
