@@ -294,7 +294,7 @@ class SimpleNeuron():
 
             self.voltage = self.calculate_voltage()
 
-            if self.voltage <= -65:
+            if self.voltage <= -70: #a bit above -80 due to the limitation 
                 self.state = 'recovering'
 
         elif self.state == 'recovering':
@@ -377,4 +377,4 @@ def stimulate_and_plot(sti_str,sti_tinterval,ap_num,duration,sti_dur=1.0,dt=0.01
 
 
 if __name__ == "__main__":
-    stimulate_and_plot(sti_str = 30, sti_tinterval = 50, ap_num = 5, duration = 500)
+    stimulate_and_plot(sti_str = 60, sti_tinterval = 50, ap_num = 5, duration = 500)
