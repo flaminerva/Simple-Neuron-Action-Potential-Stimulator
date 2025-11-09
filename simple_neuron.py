@@ -314,7 +314,7 @@ class SimpleNeuron():
             self.voltage = self.calculate_voltage()
 
             #ions_ok = np.isclose(self.Na_in, 15.0, atol=0.5) and np.isclose(self.K_in, 150.0, atol=1.0)
-            pk_ok = self.p_K <= 1.05
+            pk_ok = self.p_K <= 1.09
             vm_ok = self.voltage<= -65
 
             if vm_ok and pk_ok:
