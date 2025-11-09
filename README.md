@@ -232,7 +232,7 @@ Where $C_m = 1.0$ μF/cm²
 
 **Resting** → **Depolarizing**: $V_m \geq -55$ mV  
 **Depolarizing** → **Repolarizing**: $V_m \geq 30$ mV or $h < 0.2$  
-**Repolarizing** → **Recovering**: $V_m \leq -65$ mV  
+**Repolarizing** → **Recovering**: $V_m \leq -70$ mV  
 **Recovering** → **Resting**: $V_m \leq -65$ mV and $P_K \leq 1.05$
 
 ---
