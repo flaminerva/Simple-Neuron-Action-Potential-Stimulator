@@ -72,13 +72,13 @@ Then we met a problem. Since we were using the Goldman equation to calculate the
 ---
 The current version:
 We use 60mA current to stimulate the neuron.
-![[Screenshot 2025-11-08 at 17.32.04.png]]
+![Screenshot 2025-11-08 at 17.32.04](figures/Screenshot%202025-11-08%20at%2017.32.04.png)
 We use 30mA to stimulate the neuron. Note that there is no action potential.
-![[Screenshot 2025-11-08 at 17.45.31.png]]
-![[Screenshot 2025-11-08 at 23.23.28.png]]
+![Screenshot 2025-11-08 at 17.45.31](figures/Screenshot%202025-11-08%20at%2017.45.31.png)
+![Screenshot 2025-11-08 at 23.23.28](figures/Screenshot%202025-11-08%20at%2023.23.28.png)
 
 The previous version:
-![[Screenshot 2025-11-07 at 11.05.30.png]]
+![Screenshot 2025-11-07 at 11.05.30](figures/Screenshot%202025-11-07%20at%2011.05.30.png)
 Note that this one seems more accurate, the reason I mentioned in the section: Overall Introduction and Current Limitations.
 
 ## How does it work?
@@ -86,8 +86,11 @@ Note that this one seems more accurate, the reason I mentioned in the section: O
 Here is neuroscience information to help people understand the logic behind the code:
 The neuron receives enough current to depolarize the membrane potential beyond the threshold, and then the action potential starts. In our code, we choose to increase the permeability of Na⁺. At every step, we calculate the voltage (which is the membrane potential) using the Goldman equation. When it increases enough, we change the state to depolarizing. (The permeability can be regarded as the channel permeability, or the conductance.)
 When the voltage goes beyond the threshold, the m-gate of the Na⁺ channel opens rapidly (we increase the permeability of Na⁺), then closes (which takes about 2ms). However, the h-gate of Na⁺ simultaneously closes (see Figure 4.9). When the h-gate closes and the membrane potential almost reaches +40mV (which is near the equilibrium potential of Na⁺), the voltage-gated K⁺ channel opens. Note that the K⁺ channel is actually stimulated at the same time as the Na⁺ channel when current is injected, but it opens with a ~2ms delay. In our code, we simply open the K⁺ channel and change the permeability of K⁺. During this time, the h-gate of the Na⁺ channel is recovering.
-When the membrane potential almost reaches the equilibrium potential of K⁺, the K⁺ channel starts closing (in our code we use exponential decay). When the voltage returns to the resting membrane potential and the h-gate of the Na⁺ channel is fully open again, we can stimulate it again. (Notice that there is an absolute refractory period, which we implement in our code through a conditional check.)![[IMG_0763.jpg]] ![[IMG_0764.jpg]]
-This is about the h gate of sodium channel ![[IMG_0765.jpg]]
+When the membrane potential almost reaches the equilibrium potential of K⁺, the K⁺ channel starts closing (in our code we use exponential decay). When the voltage returns to the resting membrane potential and the h-gate of the Na⁺ channel is fully open again, we can stimulate it again. (Notice that there is an absolute refractory period, which we implement in our code through a conditional check.)
+![IMG_0763](figures/IMG_0763.jpg)
+![IMG_0764](figures/IMG_0764.jpg)
+This is about the h gate of sodium channel
+![IMG_0765](figures/IMG_0765.jpg)
 
 ## Mathematical Formulations
 ---
