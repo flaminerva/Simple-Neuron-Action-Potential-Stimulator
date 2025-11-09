@@ -1,5 +1,5 @@
 # Simple-Neuron-Action-Potential-Stimulator
-
+This is my first semester of CS bachelor personal project.
 ## What is this project about
 ---
 My project is a neuron action potential simulator that simulates how neurons fire when they get stimulated. The main idea is to track the membrane potential and how it changes when sodium and potassium ions move in and out. The neuron has different states like resting, depolarizing (when it fires), repolarizing (going back down), and recovering. I also use the Nernst equation and Goldman equation to calculate the voltage based on ion concentrations and ion permeability.
