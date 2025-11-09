@@ -376,4 +376,5 @@ def stimulate_and_plot(sti_str,sti_tinterval,ap_num,duration,sti_dur=1.0,dt=0.01
     plt.show()
 
 
-stimulate_and_plot(sti_str = 30, sti_tinterval = 50, ap_num = 5, duration = 500)
+if __name__ == "__main__":
+    stimulate_and_plot(sti_str = 30, sti_tinterval = 50, ap_num = 5, duration = 500)
